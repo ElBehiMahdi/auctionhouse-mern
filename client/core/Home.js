@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Suggestions from './../product/Suggestions'
-import {listLatest, listCategories} from './../product/api-product.js'
+import {listLatest, listCategories} from '../product/api-product'
 import Search from './../product/Search'
 import Categories from './../product/Categories'
 
@@ -51,6 +51,7 @@ export default function Home(){
   }, [])
 
     return (
+      
       <div className={classes.root}>
         <Grid container spacing={2}>
           <Grid item xs={8} sm={8}>
