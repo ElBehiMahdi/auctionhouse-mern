@@ -35,12 +35,17 @@ const Menu = withRouter(({history}) => (
             <HomeIcon/>
           </IconButton>
         </Link>
-        <Link to="/shops/all">
-          <Button style={isActive(history, "/shops/all")}>All Shops</Button>
-        </Link>
+        {/*
+          <Link to="/shops/all">
+            <Button style={isActive(history, "/shops/all")}>All Shops</Button>
+          </Link>
+        */}
+
         <Link to="/auctions/all">
           <Button style={isActive(history, "/auctions/all")}>All Auctions</Button>
         </Link>
+
+        {/*
         <Link to="/cart">
           <Button style={isActive(history, "/cart")}>
             Cart
@@ -48,7 +53,8 @@ const Menu = withRouter(({history}) => (
               <CartIcon />
             </Badge>
           </Button>
-        </Link>      
+        </Link>
+            */}
       </div>
       <div style={{'position':'absolute', 'right': '10px'}}><span style={{'float': 'right'}}>
       {
@@ -66,7 +72,9 @@ const Menu = withRouter(({history}) => (
       {
         auth.isAuthenticated() && (<span>
           {auth.isAuthenticated().user.seller && (<>
+            {/*
             <Link to="/seller/shops"><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>
+            */}
             <Link to="/myauctions"><Button style={isPartActive(history, "/myauctions")}>My Auctions</Button></Link>
             </>
           )}
