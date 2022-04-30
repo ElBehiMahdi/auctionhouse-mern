@@ -143,7 +143,6 @@ export default function Profile({ match }) {
               new Date(user.created)).toDateString()}/>
           </ListItem>
         </List>
-        <MyOrders/>
         <Paper className={classes.auctions} elevation={4}>
           <Typography type="title" color="primary">
               Auctions you bid in
